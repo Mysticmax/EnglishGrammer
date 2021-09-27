@@ -1,0 +1,21 @@
+/* nav ul li a:hover{
+    border: 1px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+} */
+
+.container .row .col-sm-4 ul li{
+    list-style: none;
+}
+.container .row .col-sm-4 ul li{
+    padding: 8px;
+}
+span{
+    color: blue;
+    padding: 4px;
+    border-radius: 5px;
+
+}
+span:hover{
+    border: 1px solid black;
+}
