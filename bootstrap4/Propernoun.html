@@ -98,27 +98,28 @@
                 <h2 class="text-center">
                     Let's begin with some simple example
                 </h2>
+                <div style="text-align: center;"><button class="btn btn-outline-info btn-sm show">hindi</button></div>
                 <p>
 
-                    <span>Agatha Christie</span> wrote many books.<br>[<span>अगाथा क्रिस्टी</span> ने कई किताबें लिखीं।]
+                    <span>Agatha Christie</span> wrote many books.<br> <div class="translate">[<span>अगाथा क्रिस्टी</span> ने कई किताबें लिखीं।]0</div>
                     <hr><br>
-                    <span>Cleopatra</span> is the cutest kitten ever.<br><span>[</span><span>क्लियोपेट्रा</span> अब तक
-                    की सबसे प्यारी बिल्ली का बच्चा है।<span>]</span>
+                    <span>Cleopatra</span> is the cutest kitten ever.<br> <div class="translate"><span>[</span><span>क्लियोपेट्रा</span> अब तक
+                        की सबसे प्यारी बिल्ली का बच्चा है।<span>]</span></div>
                     <hr><br>
-                    can see <span>Jupiter</span> tonight.<br><span>[</span>आज रात <span>बृहस्पति</span> देख सकते
-                    हैं।<span>]</span>
+                    can see <span>Jupiter</span> tonight.<br> <div class="translate"><span>[</span>आज रात <span>बृहस्पति</span> देख सकते
+                        हैं।<span>]</span></div>
                     <hr><br>
-                    He never goes anywhere without <span>Sarah</span>.<br><span>[</span>वह <span>सारा</span> के बिना
-                    कहीं नहीं जाता।<span>]</span>
+                    He never goes anywhere without <span>Sarah</span>.<br> <div class="translate"><span>[</span>वह <span>सारा</span> के बिना
+                        कहीं नहीं जाता।<span>]</span></div>
                     <hr><br>
-                    Let’s go to <span>San Francisco</span>.<br><span>[</span>चलो <span>सैन फ्रांसिस्को</span> चलते
-                    हैं।<span>]</span>
+                    Let’s go to <span>San Francisco</span>.<br> <div class="translate"><span>[</span>चलो <span>सैन फ्रांसिस्को</span> चलते
+                        हैं।<span>]</span></div>
                     <hr><br>
-                    I ordered the laptop from <span>Amazon</span>. <br><span>[</span>मैंने <span>अमेज़न</span> से लैपटॉप
-                    मंगवाया।<span>]</span>
+                    I ordered the laptop from <span>Amazon</span>. <br> <div class="translate"><span>[</span>मैंने <span>अमेज़न</span> से लैपटॉप
+                        मंगवाया।<span>]</span></div>
                     <hr><br>
-                    <span>New york</span> is one of my favorite places to visit.<br><span>[</span><span>न्यूयॉर्क</span>
-                    मेरी पसंदीदा जगहों में से एक है।<span>]</span>
+                    <span>New york</span> is one of my favorite places to visit.<br> <div class="translate"><span>[</span><span>न्यूयॉर्क</span>
+                        मेरी पसंदीदा जगहों में से एक है।<span>]</span></div>
                     <hr><br>
                 </p>
             </div>
@@ -275,7 +276,7 @@
 
 
                         <td style="padding-top: 5px; padding-bottom: 5px;">Heidi</td>
-                        <td style="padding-top: 5px; padding-bottom: 5px;"Facebook </td>
+                        <td style="padding-top: 5px; padding-bottom: 5px;">Facebook </td>
 
                         <td style="padding-top: 5px; padding-bottom: 5px;">Sunday</td>
 
@@ -285,7 +286,7 @@
                         <td style="padding-top: 5px; padding-bottom: 5px;">USA</td>
                         <td style="padding-top: 5px; padding-bottom: 5px;">UAE</td>
                     </tr>
-                    
+
                     <tr>
                         <td style="padding-top: 5px; padding-bottom: 5px;">Radamel</td>
                         <td style="padding-top: 5px; padding-bottom: 5px;">Ferrari </td>
@@ -491,7 +492,7 @@
             </div>
         </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         function checkAnswer1() {
             answer = document.getElementsByName("q1");
@@ -585,6 +586,15 @@
                 }
             }
         }
+
+        $(document).ready(function () {
+            $(".translate").hide();
+            $(".show").click(function () {
+                $(".translate").animate({
+                    height: 'toggle'
+                });
+            });
+        });
 
     </script>
 </body>

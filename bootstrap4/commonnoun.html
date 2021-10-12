@@ -97,21 +97,22 @@
                 <h2 class="text-center">
                     Let's begin with some simple example
                 </h2>
+                <div style="text-align: center;"><button class="btn btn-outline-info btn-sm show">hindi</button></div>
                 <p>
 
-                    You broke my favorite <span>mug</span>.<br>[तुमने मेरा पसंदीदा <span>मग</span> तोड़ दिया।]
+                    You broke my favorite <span>mug</span>.<br> <div class="translate">[तुमने मेरा पसंदीदा <span>मग</span> तोड़ दिया।]</div>
                     <hr><br>
-                    I really want a new pair of <span>jeans</span>.<br>[मुझे वास्तव में <span>जींस</span> की एक नई जोड़ी चाहिए।]</span>
+                    I really want a new pair of <span>jeans</span>.<br><div class="translate">[मुझे वास्तव में <span>जींस</span> की एक नई जोड़ी चाहिए।]</span></div>
                     <hr><br>
-                    I wish I could remember the name of that <span>painter</span>.<br>[काश मुझे उस <span>चित्रकार</span> का नाम याद रहता।]
+                    I wish I could remember the name of that <span>painter</span>.<br><div class="translate">[काश मुझे उस <span>चित्रकार</span> का नाम याद रहता।]</div>
                     <hr><br>
-                    They’re all waiting for us at the <span>restaurant</span>.<br>[वे सभी <span>रेस्टोरेंट</span> में हमारा इंतजार कर रहे हैं।]
+                    They’re all waiting for us at the <span>restaurant</span>.<br><div class="translate">[वे सभी <span>रेस्टोरेंट</span> में हमारा इंतजार कर रहे हैं।]</div>
                     <hr><br>
-                    I really want to live in the <span>city</span>.<br>[मैं वास्तव में <span>शहर</span> में रहना चाहता हूँ]
+                    I really want to live in the <span>city</span>.<br><div class="translate">[मैं वास्तव में <span>शहर</span> में रहना चाहता हूँ]</div>
                     <hr><br>
-                    Let’s go to watch a live game at the <span>stadium</span>. <br>[आइए <span>स्टेडियम</span> में एक लाइव गेम देखने जाएं।]
+                    Let’s go to watch a live game at the <span>stadium</span>. <br><div class="translate">[आइए <span>स्टेडियम</span> में एक लाइव गेम देखने जाएं।]</div>
                     <hr><br>
-                    I will go on a <span>hill</span>.<br>[मैं एक <span>पहाड़ी</span> पर जाऊंगा।]
+                    I will go on a <span>hill</span>.<br><div class="translate">[मैं एक <span>पहाड़ी</span> पर जाऊंगा।]</div>
                     <hr><br>
                 </p>
             </div>
@@ -492,7 +493,7 @@
             </div>
         </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         function checkAnswer1() {
             answer = document.getElementsByName("q1");
@@ -586,6 +587,15 @@
                 }
             }
         }
+
+        $(document).ready(function () {
+            $(".translate").hide();
+            $(".show").click(function () {
+                $(".translate").animate({
+                    height: 'toggle'
+                });
+            });
+        });
 
     </script>
 </body>
